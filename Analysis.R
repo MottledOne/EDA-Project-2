@@ -1,10 +1,10 @@
-setwd("C:/Users/Benjamin/Downloads/exdata_data_NEI_data/")
 library(tidyverse)
 
 rm(list =ls())
 NEI <- readRDS("summarySCC_PM25.rds")
 code_clss <- readRDS("Source_Classification_Code.rds")
 
+#Plot 1 
 Total_Emissions <- NEI %>% 
   group_by(year) %>% 
   summarize(total = sum(Emissions))
